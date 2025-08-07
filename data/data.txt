@@ -1,1 +1,14 @@
+This folder contains the data from the analysis of the Pol II simulations. The information about the data files are below:
 
+clamp.jaw.pca.[system].dat: PCA data from the pairwise distances between Rpb1-Clamp and Rpb1-Jaw domains.
+clamp.protrusion.pca.[system].dat: PCA data from the pairwise distances between Rpb1-Clamp and Rpb2-Protrusion domains.
+
+contact.bh.tl.[system].avg.dat: Contact map analysis data for trigger loop (TL) and Bridge Helix (BH) domains of Pol II.
+
+cross_corr.[system].[pair].avg.dat: Cross-correlation analysis data for the pairs: TL-BH, TL-RNA, BH-RNA, TL-Clamp.
+
+pca.coor.[system].[selection].dat: PCA data from the coordinates of the selections: TL, BH, DNA, RNA.
+
+rgyr.rna.[system].hist.avg.err.dat: Radius of gyration for RNA.
+
+rmsf.[system].bh.avg.dat: RMSF for the selections: TL, BH, Template and non-Template DNA, RNA. 
