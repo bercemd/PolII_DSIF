@@ -1,6 +1,6 @@
 # PolII_DSIF
 ## Investigation of Pol II - DSIF Elongation Complex Dynamics using MD Simulations
-This repository contains scripts for the analysis of simulations of the RNA polymerase (Pol II) elongation complexes with and without DSIF elongation factor. It also contains the output data obtained from the analyses.
+This repository contains scripts for the analysis of simulations of the RNA polymerase (Pol II) elongation complexes with and without DSIF elongation factor. It also contains the output data obtained from the analyses under the data folder, data.txt file provides information about the analysis data files.
 
 *** Requirements:
 ```
