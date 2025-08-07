@@ -16,5 +16,5 @@ python [options] filename.py
 
 To calculate RMSD of biomolecules (proteins or nucleic acids):
 ```
-python rmsd_mda.py
+python rmsd_mda.py --traj_path=md.dcd --psf_path=rnap.psf --pdb_path=rnap.pdb --fit_selection='(segid P01A and name CA)' --rmsd_selection='(segid P01A and name CA)' --out_path=rmsd.dat
 ```
