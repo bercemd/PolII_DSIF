@@ -48,7 +48,7 @@ convpdb.pl -nsel !Y+Z: -readseg model.5.pdb > spt4_5.ex.seg.pdb
 ##############################################
 
 # Let CHARMM build H atoms
-enerCHARMM.pl -par xtop=toppar/top_all36_na.rtf,pstream=toppar/toppar_all36_na_nad_ppi.str,parflex,terlist=N01R:5TER:3TRM,hsp=A1108,noperiodic -custom custompdb.inp -log ener.log -cmd ener.cmd model5.seg.pdb
+enerCHARMM.pl -par xtop=toppar/c36m_hv_na.rtf,pstream=toppar/c36m_hv_na_nad_ppi.str,parflex,terlist=N01R:5TER:3TRM,hsp=A1108,noperiodic -custom custompdb.inp -log ener.log -cmd ener.cmd model5.seg.pdb
 convpdb.pl -chainfromseg system.pdb > system.chain.pdb
 
 # Rotate to optimum orientation found by orient.py
@@ -58,7 +58,7 @@ convpdb.pl system.chain.pdb -readseg -rotatex 0 | convpdb.pl -readseg -rotatey 3
 convpdb.pl -solvate -cubic -cutoff 9 system.rotate.pdb > system.solv.pdb
 
 # Calculate the charge and add ions to neutralize
-enerCHARMM.pl -par param=x,xtop=toppar/top_all36_prot.rtf:toppar/top_all36_na.rtf,xpar=toppar/par_all36m_prot.prm:toppar/par_all36_na.prm,pstream=toppar/toppar_all36_na_nad_ppi.str,parflex,terlist=N01R:5TER:3TRM,hsp=A1108,noperiodic -charge -log charge.log system.pdb
+enerCHARMM.pl -par param=x,xtop=toppar/c36m_hv.rtf:toppar/c36m_hv_na.rtf,xpar=toppar/c36m_hv.prm:toppar/c36m_hv_na.prm,pstream=toppar/c36m_hv_na_nad_ppi.str,parflex,terlist=N01R:5TER:3TRM,hsp=A1108,noperiodic -charge -log charge.log system.pdb
 
 convpdb.pl -ions SOD:110 system.solv.pdb > system.solv.ions.pdb
 
