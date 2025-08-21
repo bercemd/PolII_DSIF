@@ -1,0 +1,14 @@
+!-------------------------------------------------------
+!
+!  Write the pdb file
+!
+!  Bercem Dutagaci (2017)
+!
+!  read via custom option
+!-------------------------------------------------------
+
+
+open write unit 2 card name system.pdb
+write coor pdb unit 2
+close unit 2
+

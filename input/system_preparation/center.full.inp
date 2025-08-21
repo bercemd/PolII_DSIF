@@ -1,0 +1,22 @@
+!-------------------------------------------------------
+!
+!  Recenter the pdb file
+!
+!  Bercem Dutagaci (2017)
+!
+!  read via custom option
+!-------------------------------------------------------
+
+
+calc xcen = 180.190205 / 2
+calc ycen = 180.190205 / 2
+calc zcen = 180.190205 / 2
+
+coor translate xdir @xcen ydir @ycen zdir @zcen
+IMAGE BYSEG XCEN @xcen YCEN @ycen ZCEN @zcen sele .not. resname TIP3 .and. .not. resname ZN2 .and. .not. resname SOD .and. .not. resname MG end
+IMAGE BYRESID XCEN @xcen YCEN @ycen ZCEN @zcen sele resname TIP3 .or. resname SOD .or. resname MG .or. resname ZN2 end
+
+open write unit 2 card name system.full.solv.complete.center.pdb
+write coor pdb unit 2
+close unit 2
+
