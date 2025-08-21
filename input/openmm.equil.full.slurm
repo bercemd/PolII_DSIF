@@ -24,11 +24,11 @@ equi_prefix=step4_equilibration
 equi_out=$proddir/equil
 
 # Equilibration
-python -u openmm_run.py -i ${equi_prefix}.1.inp -t toppar.str -p ${odir}/system.full.solv.complete.psf -c ${odir}/system.full.solv.complete.crd -b sysinfo.full.dat -orst ${equi_out}.1.rst -odcd ${equi_out}.1.dcd > ${equi_out}.1.out
+python -u openmm_run.py -i ${equi_prefix}.1.inp -t toppar.str -p ${odir}/system.full.solv.complete.psf -c ${odir}/system.full.solv.complete.crd -b sysinfo.full.dat -r prot_pos.full.txt -orst ${equi_out}.1.rst -odcd ${equi_out}.1.dcd > ${equi_out}.1.out
 
 for eq_step in {2..8}; do
 	prev=`expr ${eq_step} - 1`
 
-	python -u openmm_run.py -i ${equi_prefix}.${eq_step}.inp -t toppar.str -p ${odir}/system.full.solv.complete.psf -c ${odir}/system.full.solv.complete.crd -b sysinfo.full.dat -irst ${equi_out}.${prev}.rst -orst ${equi_out}.${eq_step}.rst -odcd ${equi_out}.${eq_step}.dcd > ${equi_out}.${eq_step}.out
+	python -u openmm_run.py -i ${equi_prefix}.${eq_step}.inp -t toppar.str -p ${odir}/system.full.solv.complete.psf -c ${odir}/system.full.solv.complete.crd -b sysinfo.full.dat -r prot_pos.full.txt -irst ${equi_out}.${prev}.rst -orst ${equi_out}.${eq_step}.rst -odcd ${equi_out}.${eq_step}.dcd > ${equi_out}.${eq_step}.out
 done
 exit 0
