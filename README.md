@@ -1,6 +1,6 @@
 # PolII_DSIF
 ## Investigation of Pol II - DSIF Elongation Complex Dynamics using MD Simulations
-This repository data for the simulations of the RNA polymerase (Pol II) elongation complexes with and without DSIF elongation factor. 
+This repository contains the data for the simulations of the RNA polymerase (Pol II) elongation complexes with and without DSIF elongation factor. 
 
 The ```input``` folder provides the scripts to run equilibration (```openmm.equil.full.slurm```) and production (```openmm.prod.full.slurm```) simulations using 
 OpenMM simulation package. 
