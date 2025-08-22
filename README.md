@@ -3,11 +3,11 @@
 This repository contains the data for the simulations of the RNA polymerase II (Pol II) elongation complexes with and without DSIF elongation factor. 
 
 The ```input``` folder provides the scripts to run equilibration (```openmm.equil.full.slurm```) and production (```openmm.prod.full.slurm```) simulations using 
-OpenMM simulation package. 
+OpenMM simulation package and initial solvated structures of the two systems (```structures.tar.gz```). 
+
+The ```input/system_preparation``` folder contains the bash script (```system_prep.sh```) that have the stepwise instructions to prepare the solvated Pol II systems from the structure with PDB ID: 5OIK, and all the additional scripts that are called by this script. 
 
 The folder ```input/openmm``` contains the Python scripts, which are originated by the CHARMM-GUI server and slightly modified, for running MD simulations. It also contains input parameters for equilibration (```step4_equilibration.#.inp```) and production ```step5_production.inp```) runs. 
-
-The ```input/system_preparation``` folder contains the bash script (```system_prep.sh```) that have the stepwise instructions to prepare the solvated Pol II systems, and all the additional scripts that are called by this script. 
 
 The folder ```input/toppar``` contains the force field parameters, which are CHARMM-c36(m) parameters and we modified them to repartition Hydrogen atom masses as described in the preprint provided in the citation section below.
 
