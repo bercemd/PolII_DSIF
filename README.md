@@ -59,5 +59,5 @@ python rmsd_mda.py --traj_path=md.dcd --psf_path=rnap.psf --pdb_path=rnap.pdb --
 *** Citation:
 
 ```
-Amith, W. D., Bogart B., Dutagaci B., Molecular Basis for Impacts of DSIF on the Dynamics of RNA Polymerase II Elongation Complex, bioRxiv, doi: https://doi.org/10.1101/2025.08.09.669504, 2025
+Amith, W. D., Bogart B., Dutagaci B., Molecular Basis for Impacts of DSIF on the Dynamics of RNA Polymerase II Elongation Complex, J. Chem. Inf. Model. 2025, 65, 22, 12499–12510, DOI: https://pubs.acs.org/doi/10.1021/acs.jcim.5c01961
 ```
